@@ -17,20 +17,7 @@ namespace GraphDrawerProject
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ComputationCorrelationSpectra comp = new ComputationCorrelationSpectra("C:/Users/Roman's pc/Source/Repos/GraphDrawerProject/GraphDrawerProject/bin/Debug/DATA.DPT");
-            double[,] mat= comp.syncSpectrun();
-            
-            Form plot = new Plotting_Form1(comp);
-            plot.Show();
-            
-
-
-        }
-
-
-
+      
         private void btn_browse_Click(object sender, EventArgs e)
         {
             openDialog.InitialDirectory = "c:\\";
@@ -60,6 +47,12 @@ namespace GraphDrawerProject
         private void btn_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_gen_Click(object sender, EventArgs e)
+        {
+            Form plotForm = new Plotting_Form(txt_location.Text);
+            plotForm.Show();
         }
     }
 }

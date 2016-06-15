@@ -45,7 +45,7 @@
             this.btn_gen.Text = "Generate Graph";
             this.btn_gen.UseVisualStyleBackColor = true;
             this.btn_gen.Visible = false;
-            this.btn_gen.Click += new System.EventHandler(this.button1_Click);
+            this.btn_gen.Click += new System.EventHandler(this.btn_gen_Click);
             // 
             // txt_location
             // 

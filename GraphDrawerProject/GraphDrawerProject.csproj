@@ -59,11 +59,11 @@
     </Compile>
     <Compile Include="ILNumerics_deploy\ILNHelper.cs" />
     <Compile Include="LogWriter.cs" />
-    <Compile Include="Plotting Form1.cs">
+    <Compile Include="PlottingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plotting Form1.Designer.cs">
-      <DependentUpon>Plotting Form1.cs</DependentUpon>
+    <Compile Include="PlottingForm.Designer.cs">
+      <DependentUpon>PlottingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,8 +77,8 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ILNumerics_deploy\ilnumerics.lic" />
-    <EmbeddedResource Include="Plotting Form1.resx">
-      <DependentUpon>Plotting Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PlottingForm.resx">
+      <DependentUpon>PlottingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
