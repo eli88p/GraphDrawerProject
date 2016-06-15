@@ -63,17 +63,20 @@ namespace GraphDrawerProject
             data["2;1:3"] = 1;
             // write back to colormap
             cm.Data = data;
-           
 
-         
+
+
             // create plot cube  
             scene.Add(new ILPlotCube(twoDMode: false) {
                 new ILSurface(XYZ) {
-                
+
                 Wireframe = { Visible = false },
                 Children = {
 		            // add colorbar to surface
-		            new ILColorbar()
+		            new ILColorbar() {
+                        Location = new PointF(0.99f,0.1f),
+                        Height=1
+                    }
                     }
                 }
             });
