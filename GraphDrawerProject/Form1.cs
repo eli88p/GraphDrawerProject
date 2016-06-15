@@ -24,6 +24,7 @@ namespace GraphDrawerProject
             
             Form plot = new Plotting_Form1(comp);
             plot.Show();
+            
 
 
         }
