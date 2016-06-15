@@ -74,7 +74,7 @@ namespace GraphDrawerProject
                 Children = {
 		            // add colorbar to surface
 		            new ILColorbar() {
-                        Location = new PointF(0.99f,0.5f),
+                        Location = new PointF(0.99f,0.01f),
                         Height=1
                     }
                     }
