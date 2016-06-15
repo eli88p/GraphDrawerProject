@@ -34,7 +34,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(542, 486);
+            this.btn_close.Location = new System.Drawing.Point(675, 548);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.rtb_showFile.Location = new System.Drawing.Point(12, 12);
             this.rtb_showFile.Name = "rtb_showFile";
-            this.rtb_showFile.Size = new System.Drawing.Size(605, 468);
+            this.rtb_showFile.Size = new System.Drawing.Size(738, 530);
             this.rtb_showFile.TabIndex = 1;
             this.rtb_showFile.Text = "";
             // 
@@ -54,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 521);
+            this.ClientSize = new System.Drawing.Size(762, 583);
             this.Controls.Add(this.rtb_showFile);
             this.Controls.Add(this.btn_close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
