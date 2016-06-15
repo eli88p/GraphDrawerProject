@@ -138,7 +138,7 @@ namespace GraphDrawerProject
 
 
 
-            var sf = pc.Add(new ILSurface(XYZ), cm);
+            //var sf = pc.Add(new ILSurface(XYZ), cm);
 
             ilPanel1.Scene = scene;
             ilPanel1.Scene.First<ILPlotCube>().Rotation = Matrix4.Rotation(new Vector3(1f, 0.23f, 1f), 0.7f);

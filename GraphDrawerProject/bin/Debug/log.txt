@@ -10,3 +10,83 @@ File name: 'D:\DATA.DPT'
    at System.IO.File.ReadAllText(String path)
    at GraphDrawerProject.FileReader.readFileToString(String path) in C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\SCE\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 16
 -------------------------------
+
+Log Entry : 13:32:30 Tuesday, May 31, 2016
+  :Error in open file, Exception: System.IO.IOException: The device is not ready.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at GraphDrawerProject.FileReader.readFileToString(String path) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 16
+-------------------------------
+
+Log Entry : 13:33:10 Tuesday, May 31, 2016
+  :Error in open file, Exception: System.IO.IOException: The device is not ready.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at GraphDrawerProject.FileReader.readFileToString(String path) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 16
+-------------------------------
+
+Log Entry : 13:43:23 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 13:51:33 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 13:54:07 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 14:07:58 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 14:09:56 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 14:11:45 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 14:12:50 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------
+
+Log Entry : 14:15:33 Tuesday, May 31, 2016
+  :Error in cast from file to array with index:[53,0] Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at GraphDrawerProject.FileReader.stringToArray(String matrix) in C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\FileReader.cs:line 48
+-------------------------------

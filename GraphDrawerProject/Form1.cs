@@ -19,7 +19,7 @@ namespace GraphDrawerProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ComputationCorrelationSpectra comp = new ComputationCorrelationSpectra("D:/DATA.DPT");
+            ComputationCorrelationSpectra comp = new ComputationCorrelationSpectra("C:/Users/Roman's pc/Source/Repos/GraphDrawerProject/GraphDrawerProject/bin/Debug/DATA.DPT");
             double[,] mat= comp.syncSpectrun();
             
             Form plot = new Plotting_Form1(comp);
