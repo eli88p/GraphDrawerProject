@@ -29,9 +29,37 @@ namespace GraphDrawerProject
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+
+        private void btn_browse_Click(object sender, EventArgs e)
+        {
+            openDialog.InitialDirectory = "c:\\";
+            openDialog.Filter = "Text Files|*.txt|DPT Files|*.dpt|All Files|*.*";
+            openDialog.FilterIndex = 2;
+            openDialog.Multiselect = false;
+
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                txt_location.Text = openDialog.FileName;
+                btn_gen.Visible = true;
+                btn_look.Visible = true;
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_look_Click(object sender, EventArgs e)
+        {
+            Form showFile = new ShowFileForm(txt_location.Text);
+            showFile.Show();
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

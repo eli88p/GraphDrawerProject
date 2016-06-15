@@ -46,7 +46,6 @@ C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDraw
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Core.xml
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Drawing.xml
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.csprojResolveAssemblyReference.cache
-C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Form1.resources
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Plotting_Form1.resources
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Properties.Resources.resources
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.csproj.GenerateResource.Cache
@@ -70,3 +69,5 @@ C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug
 C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Computing.dll
 C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Core.dll
 C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Drawing.dll
+C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.MainForm.resources
+C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.ShowFileForm.resources
