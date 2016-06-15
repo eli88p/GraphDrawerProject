@@ -13,6 +13,10 @@ namespace GraphDrawerProject
     public partial class Plotting_Form : Form
     {
         private ComputationCorrelationSpectra comp;
+        private ILArray<double> XYZ;
+        ILPlotCube pc;
+        ILScene scene = new ILScene();
+        
         public Plotting_Form(string filename)
         {
             comp = new ComputationCorrelationSpectra(filename);
@@ -24,14 +28,14 @@ namespace GraphDrawerProject
         private void Plotting_Form_Load(object sender, EventArgs e)
         {
             double[,] mat = comp.syncSpectrun();
-            ILPlotCube pc = new ILPlotCube(twoDMode: false);
-            ILScene scene = new ILScene();
+           
             int rows = mat.Length / 3;
 
             ILArray<double>[] points = new ILArray<double>[rows];
+
             for (int i = 0; i < rows; i++)
             {
-                points[i] = new double[3] { mat[i, 0], mat[i, 1], mat[i, 2] };
+                points[i] = new double[3] { mat[i, 0], mat[i, 1], mat[i, 2]+0.00045 };
 
             }
 
@@ -50,12 +54,11 @@ namespace GraphDrawerProject
                     x++;
                 }
             }
-            ILArray<double> XYZ = ILMath.zeros<double>(2, rows / 2, 3);
+            XYZ = ILMath.zeros<double>(2, rows / 2, 3);
             XYZ[":;:;0"] = ZMat;
             XYZ[":;:;1"] = XMat; // X pointinates for every grid point
             XYZ[":;:;2"] = YMat; // Y pointinates for every grid point
 
-          
 
             ILColormap cm = new ILColormap(Colormaps.Bone);
             ILArray<float> data = cm.Data;
@@ -65,13 +68,11 @@ namespace GraphDrawerProject
             cm.Data = data;
 
 
-
-            // create plot cube  
-            scene.Add(new ILPlotCube(twoDMode: false) {
-                new ILSurface(XYZ) {
-                    Colormap = new ILColormap(data),
-                    Wireframe = { Visible = false },
-                    Children = {
+            ILSurface sureface = new ILSurface(XYZ)
+            {
+                Colormap = new ILColormap(data),
+                Wireframe = { Visible = false },
+                Children = {
 		            // add colorbar to surface
 		            new ILColorbar() {
 
@@ -79,31 +80,73 @@ namespace GraphDrawerProject
                         Height=1
                     }
                     }
-                }
-            });
+            };
+
+            pc = new ILPlotCube(twoDMode: false)
+            {
+                sureface
+            };
+
+            //sureface.MouseEnter += (_s, _a) => {
+            //    if (!_a.DirectionUp)
+            //        Text = "On Plot - Target: " + _a.Target.ToString();
+            //};
+            //sureface.MouseLeave += (_s, _a) => {
+            //    if (!_a.DirectionUp)
+            //        Text = "Off Plot - Target: " + _a.Target.ToString();
+            //};
+
+            sureface.MouseMove += (_s, _a) => {
+                label1.Text=_a.Location.ToString();
+            };
+
+            // create plot cube
+
+            scene.Add(pc);
 
             //var sf = pc.Add(new ILSurface(XYZ), cm);
 
             ilPanel1.Scene = scene;
             ilPanel1.Scene.First<ILPlotCube>().Rotation = Matrix4.Rotation(new Vector3(1f, 0.23f, 1f), 0.7f);
 
+           
+
+
         }
 
-        public ILArray<float> toFloatArray(ILArray<double> arr)
-        {
-            if (arr == null) return null;
-            int n = arr.Length;
-            ILArray<float> ret = new float[n];
-            for (int i = 0; i < n; i++)
-            {
-                ret[i] = (float)arr[i];
-            }
-            return ret;
-        }
-        
+
+
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_globMax_Click(object sender, EventArgs e)
+        {
+            ILArray<float> PosOfMax = Graph.getGlobalMax(XYZ);
+            pc.Add(new ILPoints()
+            {
+                Positions = PosOfMax,
+                Size = 10,
+            });
+            
+            ilPanel1.Update();
+            ilPanel1.Refresh();
+        }
+
+        private void btn_globMin_Click(object sender, EventArgs e)
+        {
+            ILArray<float> PosOfMin = Graph.getGlobalMin(XYZ);
+            pc.Add(new ILPoints()
+            {
+                Color = Color.Blue,
+                Positions = PosOfMin,
+                Size = 10,
+               
+            });
+
+            ilPanel1.Update();
+            ilPanel1.Refresh();
         }
     }
 }

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ComputationCorrelationSpectra.cs" />
     <Compile Include="FileReader.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
