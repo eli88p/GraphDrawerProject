@@ -57,7 +57,7 @@ namespace GraphDrawerProject
 
           
 
-            ILColormap cm = new ILColormap(Colormaps.Jet);
+            ILColormap cm = new ILColormap(Colormaps.Bone);
             ILArray<float> data = cm.Data;
             // replace green keypoint with white
             data["2;1:3"] = 1;
@@ -69,11 +69,12 @@ namespace GraphDrawerProject
             // create plot cube  
             scene.Add(new ILPlotCube(twoDMode: false) {
                 new ILSurface(XYZ) {
-
-                Wireframe = { Visible = false },
-                Children = {
+                    Colormap = new ILColormap(data),
+                    Wireframe = { Visible = false },
+                    Children = {
 		            // add colorbar to surface
 		            new ILColorbar() {
+
                         Location = new PointF(0.99f,0.01f),
                         Height=1
                     }
