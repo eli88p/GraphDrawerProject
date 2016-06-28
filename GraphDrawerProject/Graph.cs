@@ -57,5 +57,81 @@ namespace GraphDrawerProject
             return point;
         }
 
+        public static int getCountOfYAxis(ILArray<double> arr, int x)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Size[1]; i++)
+            {
+                if (Convert.ToInt32(Math.Truncate(arr[0, i, 2].GetArrayForRead()[0])) == x)
+                    count++;
+                else if (Convert.ToInt32(Math.Truncate(arr[1, i, 2].GetArrayForRead()[0])) == x)
+                    count++;
+            }
+            return count;
+        }
+
+        public static int getCountOfXAxis(ILArray<double> arr, int x)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Size[1]; i++)
+            {
+                if (Convert.ToInt32(Math.Truncate(arr[0, i, 1].GetArrayForRead()[0])) == x)
+                    count++;
+                else if (Convert.ToInt32(Math.Truncate(arr[1, i, 1].GetArrayForRead()[0])) == x)
+                    count++;
+            }
+            return count;
+        }
+
+        public static ILArray<float> getSectionByX(ILArray<double> arr, int x) {
+            int count = getCountOfXAxis(arr, x);
+
+
+            ILArray<float> ret = ILMath.zeros<float>(2, count);
+            int j = 0;
+            for(int i=0;i< arr.Size[1];i++)
+            {
+                if(Convert.ToInt32(Math.Truncate(arr[0, i, 1].GetArrayForRead()[0])) == x)
+                {
+                    ret [0, j] =   (float)arr[0, i, 2].GetArrayForRead()[0];
+                    ret[1, j] = (float)arr[0, i, 0].GetArrayForRead()[0];
+                    j++;
+                }
+                else if (Convert.ToInt32(Math.Truncate(arr[1, i, 1].GetArrayForRead()[0])) == x)
+                {
+                    ret[0, j] = (float)arr[1, i, 2].GetArrayForRead()[0];
+                    ret[1, j] = (float)arr[1, i, 0].GetArrayForRead()[0];
+                    j++;
+                }
+            }
+            return ret;
+
+        }
+
+        public static ILArray<float> getSectionByY(ILArray<double> arr, int x)
+        {
+            int count = getCountOfYAxis(arr, x);
+
+
+            ILArray<float> ret = ILMath.zeros<float>(2, count);
+            int j = 0;
+            for (int i = 0; i < arr.Size[1]; i++)
+            {
+                if (Convert.ToInt32(Math.Truncate(arr[0, i, 2].GetArrayForRead()[0])) == x)
+                {
+                    ret[0, j] = (float)arr[0, i, 1].GetArrayForRead()[0];
+                    ret[1, j] = (float)arr[0, i, 0].GetArrayForRead()[0];
+                    j++;
+                }
+                else if (Convert.ToInt32(Math.Truncate(arr[1, i, 2].GetArrayForRead()[0])) == x)
+                {
+                    ret[0, j] = (float)arr[1, i, 1].GetArrayForRead()[0];
+                    ret[1, j] = (float)arr[1, i, 0].GetArrayForRead()[0];
+                    j++;
+                }
+            }
+            return ret;
+
+        }
     }
 }

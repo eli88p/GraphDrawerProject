@@ -33,7 +33,11 @@
             this.btn_close = new System.Windows.Forms.Button();
             this.btn_globMax = new System.Windows.Forms.Button();
             this.btn_globMin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_loc = new System.Windows.Forms.Label();
+            this.btn_getCutByX = new System.Windows.Forms.Button();
+            this.btn_getCutByY = new System.Windows.Forms.Button();
+            this.txt_getCutByX = new System.Windows.Forms.TextBox();
+            this.txt_getCutByY = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ilPanel1
@@ -45,13 +49,14 @@
             this.ilPanel1.Name = "ilPanel1";
             this.ilPanel1.Rectangle = ((System.Drawing.RectangleF)(resources.GetObject("ilPanel1.Rectangle")));
             this.ilPanel1.ShowUIControls = false;
-            this.ilPanel1.Size = new System.Drawing.Size(646, 536);
+            this.ilPanel1.Size = new System.Drawing.Size(646, 602);
             this.ilPanel1.TabIndex = 0;
             this.ilPanel1.Timeout = ((uint)(0u));
+            this.ilPanel1.Load += new System.EventHandler(this.ilPanel1_Load);
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(675, 561);
+            this.btn_close.Location = new System.Drawing.Point(770, 602);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 1;
@@ -63,7 +68,7 @@
             // 
             this.btn_globMax.Location = new System.Drawing.Point(662, 12);
             this.btn_globMax.Name = "btn_globMax";
-            this.btn_globMax.Size = new System.Drawing.Size(102, 23);
+            this.btn_globMax.Size = new System.Drawing.Size(192, 23);
             this.btn_globMax.TabIndex = 2;
             this.btn_globMax.Text = "Mark Global Max";
             this.btn_globMax.UseVisualStyleBackColor = true;
@@ -73,27 +78,65 @@
             // 
             this.btn_globMin.Location = new System.Drawing.Point(662, 41);
             this.btn_globMin.Name = "btn_globMin";
-            this.btn_globMin.Size = new System.Drawing.Size(102, 23);
+            this.btn_globMin.Size = new System.Drawing.Size(192, 23);
             this.btn_globMin.TabIndex = 3;
             this.btn_globMin.Text = "Mark Global Min";
             this.btn_globMin.UseVisualStyleBackColor = true;
             this.btn_globMin.Click += new System.EventHandler(this.btn_globMin_Click);
             // 
-            // label1
+            // lbl_loc
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.lbl_loc.AutoSize = true;
+            this.lbl_loc.Location = new System.Drawing.Point(8, 615);
+            this.lbl_loc.Name = "lbl_loc";
+            this.lbl_loc.Size = new System.Drawing.Size(48, 13);
+            this.lbl_loc.TabIndex = 4;
+            this.lbl_loc.Text = "Location";
+            // 
+            // btn_getCutByX
+            // 
+            this.btn_getCutByX.Location = new System.Drawing.Point(663, 71);
+            this.btn_getCutByX.Name = "btn_getCutByX";
+            this.btn_getCutByX.Size = new System.Drawing.Size(85, 20);
+            this.btn_getCutByX.TabIndex = 5;
+            this.btn_getCutByX.Text = "Section By X:";
+            this.btn_getCutByX.UseVisualStyleBackColor = true;
+            this.btn_getCutByX.Click += new System.EventHandler(this.btn_getCutByX_Click);
+            // 
+            // btn_getCutByY
+            // 
+            this.btn_getCutByY.Location = new System.Drawing.Point(663, 97);
+            this.btn_getCutByY.Name = "btn_getCutByY";
+            this.btn_getCutByY.Size = new System.Drawing.Size(85, 20);
+            this.btn_getCutByY.TabIndex = 6;
+            this.btn_getCutByY.Text = "Section By Y:";
+            this.btn_getCutByY.UseVisualStyleBackColor = true;
+            this.btn_getCutByY.Click += new System.EventHandler(this.btn_getCutByY_Click);
+            // 
+            // txt_getCutByX
+            // 
+            this.txt_getCutByX.Location = new System.Drawing.Point(754, 71);
+            this.txt_getCutByX.Name = "txt_getCutByX";
+            this.txt_getCutByX.Size = new System.Drawing.Size(100, 20);
+            this.txt_getCutByX.TabIndex = 7;
+            // 
+            // txt_getCutByY
+            // 
+            this.txt_getCutByY.Location = new System.Drawing.Point(754, 97);
+            this.txt_getCutByY.Name = "txt_getCutByY";
+            this.txt_getCutByY.Size = new System.Drawing.Size(100, 20);
+            this.txt_getCutByY.TabIndex = 8;
             // 
             // Plotting_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 596);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(857, 637);
+            this.Controls.Add(this.txt_getCutByY);
+            this.Controls.Add(this.txt_getCutByX);
+            this.Controls.Add(this.btn_getCutByY);
+            this.Controls.Add(this.btn_getCutByX);
+            this.Controls.Add(this.lbl_loc);
             this.Controls.Add(this.btn_globMin);
             this.Controls.Add(this.btn_globMax);
             this.Controls.Add(this.btn_close);
@@ -113,7 +156,11 @@
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button btn_globMax;
         private System.Windows.Forms.Button btn_globMin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_loc;
+        private System.Windows.Forms.Button btn_getCutByX;
+        private System.Windows.Forms.Button btn_getCutByY;
+        private System.Windows.Forms.TextBox txt_getCutByX;
+        private System.Windows.Forms.TextBox txt_getCutByY;
     }
 }
 

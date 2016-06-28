@@ -71,3 +71,23 @@ C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.MainForm.resources
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.ShowFileForm.resources
 C:\Users\eli88\Documents\Visual Studio 2015\Projects\TrafficSimulation\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Plotting_Form.resources
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.csprojResolveAssemblyReference.cache
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.MainForm.resources
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Plotting_Form.resources
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Properties.Resources.resources
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.ShowFileForm.resources
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.csproj.GenerateResource.Cache
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.exe
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.pdb
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\GraphDrawerProject.exe.config
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\GraphDrawerProject.exe
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\GraphDrawerProject.pdb
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Computing.dll
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Core.dll
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Drawing.dll
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\OpenTK.GLControl.dll
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\OpenTK.dll
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Computing.xml
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Core.xml
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Drawing.xml
+C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.SectionCut.resources

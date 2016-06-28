@@ -14,8 +14,8 @@ namespace GraphDrawerProject
     {
         private ComputationCorrelationSpectra comp;
         private ILArray<double> XYZ;
-        ILPlotCube pc;
-        ILScene scene = new ILScene();
+        private ILPlotCube pc;
+        private ILScene scene = new ILScene();
         
         public Plotting_Form(string filename)
         {
@@ -97,7 +97,7 @@ namespace GraphDrawerProject
             //};
 
             sureface.MouseMove += (_s, _a) => {
-                label1.Text=_a.Location.ToString();
+                lbl_loc.Text=_a.Location.ToString();
             };
 
             // create plot cube
@@ -147,6 +147,34 @@ namespace GraphDrawerProject
 
             ilPanel1.Update();
             ilPanel1.Refresh();
+        }
+
+        private void btn_getCutByX_Click(object sender, EventArgs e)
+        {
+            if (Graph.getCountOfXAxis(XYZ, Convert.ToInt32(txt_getCutByX.Text)) != 0)
+            {
+                SectionCut secCutForm = new SectionCut(XYZ, "X", Convert.ToInt32(txt_getCutByX.Text));
+                secCutForm.Show();
+            }
+            else
+                MessageBox.Show("There is invalid X");
+            
+        }
+
+        private void ilPanel1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_getCutByY_Click(object sender, EventArgs e)
+        {
+            if (Graph.getCountOfYAxis(XYZ, Convert.ToInt32(txt_getCutByY.Text)) != 0)
+            {
+                SectionCut secCutForm = new SectionCut(XYZ, "Y", Convert.ToInt32(txt_getCutByY.Text));
+                secCutForm.Show();
+            }
+            else
+                MessageBox.Show("There is invalid Y");
         }
     }
 }
