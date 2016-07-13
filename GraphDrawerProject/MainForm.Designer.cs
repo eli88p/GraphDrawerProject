@@ -34,11 +34,12 @@
             this.btn_look = new System.Windows.Forms.Button();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.btn_close = new System.Windows.Forms.Button();
+            this.cb_syncType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_gen
             // 
-            this.btn_gen.Location = new System.Drawing.Point(271, 129);
+            this.btn_gen.Location = new System.Drawing.Point(271, 123);
             this.btn_gen.Name = "btn_gen";
             this.btn_gen.Size = new System.Drawing.Size(100, 23);
             this.btn_gen.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             // btn_look
             // 
-            this.btn_look.Location = new System.Drawing.Point(190, 129);
+            this.btn_look.Location = new System.Drawing.Point(43, 121);
             this.btn_look.Name = "btn_look";
             this.btn_look.Size = new System.Drawing.Size(75, 23);
             this.btn_look.TabIndex = 4;
@@ -86,11 +87,25 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // cb_syncType
+            // 
+            this.cb_syncType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_syncType.FormattingEnabled = true;
+            this.cb_syncType.Items.AddRange(new object[] {
+            "Synchronous Spectrum",
+            "Asynchronous Spectrum"});
+            this.cb_syncType.Location = new System.Drawing.Point(124, 123);
+            this.cb_syncType.Name = "cb_syncType";
+            this.cb_syncType.Size = new System.Drawing.Size(141, 21);
+            this.cb_syncType.TabIndex = 6;
+            this.cb_syncType.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 224);
+            this.Controls.Add(this.cb_syncType);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_look);
             this.Controls.Add(this.btn_browse);
@@ -112,6 +127,7 @@
         private System.Windows.Forms.Button btn_look;
         private System.Windows.Forms.OpenFileDialog openDialog;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.ComboBox cb_syncType;
     }
 }
 

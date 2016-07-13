@@ -16,18 +16,23 @@ namespace GraphDrawerProject
         private ILArray<double> XYZ;
         private ILPlotCube pc;
         private ILScene scene = new ILScene();
+        private string syncType;
         
-        public Plotting_Form(string filename)
+        public Plotting_Form(string filename,string syncType)
         {
             comp = new ComputationCorrelationSpectra(filename);
-            
+            this.syncType = syncType;
             InitializeComponent();
         }
         
         
         private void Plotting_Form_Load(object sender, EventArgs e)
         {
-            double[,] mat = comp.syncSpectrun();
+            double[,] mat;
+            if (syncType == "Synchronous Spectrum")
+                mat = comp.syncSpectrum();
+            else
+                mat = comp.asyncSpectrum();
            
             int rows = mat.Length / 3;
 

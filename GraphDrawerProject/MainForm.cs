@@ -30,6 +30,7 @@ namespace GraphDrawerProject
                 txt_location.Text = openDialog.FileName;
                 btn_gen.Visible = true;
                 btn_look.Visible = true;
+                cb_syncType.Visible = true;
             }
         }
 
@@ -51,8 +52,14 @@ namespace GraphDrawerProject
 
         private void btn_gen_Click(object sender, EventArgs e)
         {
-            Form plotForm = new Plotting_Form(txt_location.Text);
-            plotForm.Show();
+            if (cb_syncType.Text != "")
+            {
+                Form plotForm = new Plotting_Form(txt_location.Text, cb_syncType.Text.ToString());
+                plotForm.Show();
+
+            }
+            else
+                MessageBox.Show("Please selcet Async/Sync!");
         }
     }
 }
