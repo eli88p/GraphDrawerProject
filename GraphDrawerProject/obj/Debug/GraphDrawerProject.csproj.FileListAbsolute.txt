@@ -91,3 +91,6 @@ C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNu
 C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Core.xml
 C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\bin\Debug\ILNumerics.Drawing.xml
 C:\Users\eli88\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.SectionCut.resources
+C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.MainForm.resources
+C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.Plotting_Form.resources
+C:\Users\Roman's pc\Source\Repos\GraphDrawerProject\GraphDrawerProject\obj\Debug\GraphDrawerProject.ShowFileForm.resources
